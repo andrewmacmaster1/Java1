@@ -119,10 +119,18 @@ public class JavaOne {
             }
             System.out.println("Number of vowels: " + vowels + "\nNumber of consonants: " + consonants);
         }
+        console.close();
     }
 
     public void ex6() {
-        System.out.println("Student 1: ex6.");
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int first = console.nextInt();
+        System.out.print("Enter second number: ");
+        int second = console.nextInt();
+        System.out.println("Result: " + (first + second));
+        console.close();
     }
 
     public void ex7() {
