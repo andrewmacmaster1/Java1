@@ -134,7 +134,47 @@ public class JavaOne {
     }
 
     public void ex7() {
-        System.out.println("Student 1: ex7.");
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int first = console.nextInt();
+        System.out.print("Enter second number: ");
+        int second = console.nextInt();
+        double result = 0;
+
+        boolean validOperation = false;
+
+        while (!validOperation)
+        {
+            System.out.print("Enter operation (add, sub, mul, div): ");
+            String operation = console.next();
+            if (operation.equals("add"))
+            {
+                result = first + second;
+                validOperation = true;
+            }
+            else if (operation.equals("sub"))
+            {
+                result = first - second;
+                validOperation = true;
+            }
+            else if (operation.equals("mul"))
+            {
+                result = first * second;
+                validOperation = true;
+            }
+            else if (operation.equals("div"))
+            {
+                result = first / second;
+                validOperation = true;
+            }
+            else
+            {
+                System.out.println("Enter a valid operation.");
+            }
+        }
+        System.out.println("Result: " + result);
+        console.close();
     }
 
     public void ex8() {
