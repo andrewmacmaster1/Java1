@@ -84,7 +84,41 @@ public class JavaOne {
     }
 
     public void ex5() {
-        System.out.println("Student 1: ex5.");
+        Scanner console = new Scanner(System.in);
+
+        while(true)
+        {
+            System.out.print("Enter a string: ");
+            String to_count = console.nextLine();
+            to_count = to_count.toLowerCase();
+            int vowels = 0;
+            int consonants = 0;
+
+            if (to_count.equals("quit"))
+            {
+                break;
+            }
+            for (int i = 0; i < to_count.length(); i++)
+            {
+                if (Character.isAlphabetic(to_count.charAt(i)))
+                {
+                    char letter = to_count.charAt(i);
+                    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+                    {
+                        vowels += 1;
+                    }
+                    else
+                    {
+                        consonants += 1;
+                    }
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            System.out.println("Number of vowels: " + vowels + "\nNumber of consonants: " + consonants);
+        }
     }
 
     public void ex6() {
