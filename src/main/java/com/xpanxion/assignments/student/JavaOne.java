@@ -226,7 +226,19 @@ public class JavaOne {
     }
 
     public void ex10() {
-        System.out.println("Student 1: ex10.");
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        StringTokenizer token =  new StringTokenizer(console.nextLine());
+
+        while (token.hasMoreTokens())
+        {
+            String diagonal = token.nextToken();
+            for (int i = 0; i < diagonal.length(); i++)
+            {
+                System.out.println(" ".repeat(i) + diagonal.charAt(i));
+            }
+        }
+        console.close();
     }
 
     //
