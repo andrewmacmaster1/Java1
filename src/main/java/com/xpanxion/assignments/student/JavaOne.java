@@ -206,7 +206,7 @@ public class JavaOne {
 
     public void ex9() {
         Scanner console = new Scanner(System.in);
-        int secret_number = (int) Math.random()*5+1;
+        int secret_number = (int) Math.floor(Math.random()*5+1);
 
         while(true)
         {
