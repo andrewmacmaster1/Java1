@@ -178,11 +178,51 @@ public class JavaOne {
     }
 
     public void ex8() {
-        System.out.println("Student 1: ex8.");
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter price per square feet: ");
+        double ppsf = Double.parseDouble(console.nextLine());
+        double total_price = 0;
+
+        while (true)
+        {
+            System.out.print("Enter room dimensions (width x length): ");
+            String room_size = console.nextLine();
+            if (room_size.equals("done"))
+            {
+                break;
+            }
+            else
+            {
+                StringTokenizer tokenizer = new StringTokenizer(room_size);
+                double width = Double.parseDouble(tokenizer.nextToken());
+                tokenizer.nextToken();
+                double length = Double.parseDouble(tokenizer.nextToken());
+                total_price += length*width*ppsf;
+            }
+        }
+        console.close();
+        System.out.println("Total cose: $" + total_price);
     }
 
     public void ex9() {
-        System.out.println("Student 1: ex9.");
+        Scanner console = new Scanner(System.in);
+        int secret_number = (int) Math.random()*5+1;
+
+        while(true)
+        {
+            System.out.print("Enter a number: ");
+            int guess = console.nextInt();
+            if (guess == secret_number)
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("Try again...");
+            }
+        }
+        System.out.println("You guessed it!!!");
+        console.close();
     }
 
     public void ex10() {
